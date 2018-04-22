@@ -37,6 +37,11 @@ public class buttonManagerScript : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //play animation to move the plane up a bit
@@ -56,11 +61,6 @@ public class buttonManagerScript : MonoBehaviour {
             onDownButtonPress();
             Debug.Log("Success on down");
         }
-
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-       
     }
 
 }
