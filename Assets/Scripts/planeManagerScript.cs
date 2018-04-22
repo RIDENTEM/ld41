@@ -8,7 +8,7 @@ public class planeManagerScript : MonoBehaviour
     //list of planes that the airplane will be traveling across
     [SerializeField] List<GameObject> planes;
     private float planeX;
-
+    [SerializeField] private float planeY;
     private void Awake()
     {
         for (int i = 0; i < planes.Count; i++)
@@ -20,7 +20,7 @@ public class planeManagerScript : MonoBehaviour
             else
                 planeX = i * 21;
 
-            planes[i].GetComponent<Transform>().position = new Vector3(planeX, 0, 0);
+            planes[i].GetComponent<Transform>().position = new Vector3(planeX, planeY, 0.0f);
         }
     }
 
