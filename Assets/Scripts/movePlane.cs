@@ -5,15 +5,21 @@ using UnityEngine;
 public class movePlane : MonoBehaviour {
 
     private Rigidbody2D airplaneRB;
+    [SerializeField] private AudioSource pilotMonologue;
     [SerializeField] private float velocity = 0.0f;
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
+        
+        pilotMonologue.playOnAwake = true;
+    }
+    void Start () {
         airplaneRB = GetComponent<Rigidbody2D>();
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
         //if done with that intro sequence
+        if(!pilotMonologue.isPlaying)
         airplaneRB.velocity = new Vector3(velocity * Time.deltaTime, 0.0f, 0.0f);
 	}
 }
