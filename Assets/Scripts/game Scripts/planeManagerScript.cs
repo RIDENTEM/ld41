@@ -18,21 +18,11 @@ public class planeManagerScript : MonoBehaviour
             if (i == 0)
                 planeX = 0;
             else
-                planeX = i * 21;
+                planeX = i * 22;
 
             planes[i].GetComponent<Transform>().position = new Vector3(planeX, planeY, 0.0f);
         }
     }
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 }
