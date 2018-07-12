@@ -1,2 +1,2 @@
 # ld41
-I forgot to make a repo earlier
+My Ludum Dare 41 submission, first Ludum Dare and first game created by myself
